@@ -3,6 +3,7 @@ package a03.tddcolour;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ColourTest {
@@ -32,6 +33,19 @@ class ColourTest {
     void constructorOneParameterThrowOutOfRange() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Colour(0xFFFFFF0));
         Exception exception2 = assertThrows(IllegalArgumentException.class, () -> new Colour(-1));
+    }
+
+    @Test
+    @DisplayName("Test constructor stores rgb information correctly")
+    void constructorStoreCorrectly() {
+        Colour c0 = new Colour(0.55F, 0.55F, 0.55F);
+        assertEquals(0.55F, c0.red);
+        assertEquals(0.55F, c0.green);
+        assertEquals(0.55F, c0.blue);
+        Colour c1 = new Colour(0xF0F0F0);
+        assertEquals(0.9375F, c1.red);
+        assertEquals(0.9375F, c1.green);
+        assertEquals(0.9375F, c1.blue);
     }
 
 }
