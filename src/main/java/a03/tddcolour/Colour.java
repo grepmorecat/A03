@@ -21,4 +21,13 @@ public class Colour {
         green = (float) (((rgb >> 8) & 0xFF) / 256.0);
         blue = (float) ((rgb & 0xFF) / 256.0);
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Colour) {
+            if (red == ((Colour) other).red && green == ((Colour) other).green && blue == ((Colour) other).blue) return true;
+            return false;
+        }
+        return false;
+    }
 }
