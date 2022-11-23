@@ -31,6 +31,7 @@ class ColourTest {
             "between 0x000000 and 0xFFFFFF")
     void constructorOneParameterThrowOutOfRange() {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Colour(0xFFFFFF0));
+        Exception exception2 = assertThrows(IllegalArgumentException.class, () -> new Colour(-1));
     }
 
 }

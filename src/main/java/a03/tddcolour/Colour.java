@@ -15,7 +15,7 @@ public class Colour {
         blue = b;
     }
     public Colour(int rgb) {
-        if (rgb > 0xFFFFFF) {
+        if (rgb > 0xFFFFFF || rgb < 0) {
             throw new IllegalArgumentException("Parameter out of range.");
         }
         rgbValue = rgb;
