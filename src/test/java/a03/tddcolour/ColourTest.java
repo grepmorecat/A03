@@ -48,6 +48,18 @@ class ColourTest {
         assertEquals(0.9375F, c1.blue);
     }
 
+    @Test
+    @DisplayName("If same component values, two colours should be equal")
+    void twoObjectEqualIfSameComponent() {
+        Colour c0 = new Colour(0.55F, 0.55F, 0.55F);
+        Colour c1 = new Colour(0.55F, 0.55F, 0.55F);
+        assertEquals(c0, c1);
+        Colour c3 = new Colour(0xF0F0F0);
+        Colour c2 = new Colour(0xF0F0F0);
+        assertEquals(c2, c3);
+    }
+
+
 }
 
 
