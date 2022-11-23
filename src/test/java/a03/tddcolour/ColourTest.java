@@ -18,6 +18,13 @@ class ColourTest {
         Exception exception =  assertThrows(IllegalArgumentException.class, () -> new Colour(2F, 0F, 0F));
     }
 
+    @Test
+    @DisplayName("A constructor should take one parameter of integer values between 0x000000 to 0xFFFFFF")
+    void constructorTakeOneInteger() {
+        Colour c0 = new Colour(0x0);
+        Colour c1 = new Colour(0xFF00FF);
+    }
+
 }
 
 
