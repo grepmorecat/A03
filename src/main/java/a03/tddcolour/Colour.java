@@ -17,9 +17,9 @@ public class Colour {
         if (rgb > 0xFFFFFF || rgb < 0) {
             throw new IllegalArgumentException("Parameter out of range.");
         }
-        red = (float) (((rgb >> 16) & 0xFF) / 256.0);
-        green = (float) (((rgb >> 8) & 0xFF) / 256.0);
-        blue = (float) ((rgb & 0xFF) / 256.0);
+        red = (float) (((rgb >> 16) & 0xFF) / 255.0);
+        green = (float) (((rgb >> 8) & 0xFF) / 255.0);
+        blue = (float) ((rgb & 0xFF) / 255.0);
     }
 
     @Override
