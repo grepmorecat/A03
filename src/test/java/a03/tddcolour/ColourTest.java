@@ -42,9 +42,9 @@ class ColourTest {
         assertEquals(0.55F, c0.green);
         assertEquals(0.55F, c0.blue);
         Colour c1 = new Colour(0xF0F0F0);
-        assertEquals(0.9375F, c1.red);
-        assertEquals(0.9375F, c1.green);
-        assertEquals(0.9375F, c1.blue);
+        assertEquals(0.9411764706F, c1.red);
+        assertEquals(0.9411764706F, c1.green);
+        assertEquals(0.9411764706F, c1.blue);
     }
 
     @Test
