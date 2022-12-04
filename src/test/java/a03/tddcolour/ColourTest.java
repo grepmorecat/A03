@@ -56,6 +56,7 @@ class ColourTest {
         Colour c3 = new Colour(0xF0F0F0);
         Colour c2 = new Colour(0xF0F0F0);
         assertEquals(c2, c3);
+        assertEquals(c3, c2); // test the reflexive
         Colour c4 = new Colour(0xF1F0F0);
         Colour c5 = new Colour(0xF0F0F0);
         assertNotEquals(c4, c5);
