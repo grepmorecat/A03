@@ -63,6 +63,20 @@ class ColourTest {
         assertNotEquals(c4, new Object());
     }
 
+    @Test
+    @DisplayName("Instance form different constructors should by compatible")
+    void twoObjectFromDifferentConstructorEqualIfSameComponent() {
+        Colour c0 = new Colour(0xF0F0F0);
+        Colour c1 = new Colour(0.9411764706F, 0.9411764706F, 0.9411764706F);
+        assertEquals(c0, c1);
+        assertEquals(c1, c0); // test the reflexive
+
+        Colour c2 = new Colour(0xF1F0F0);
+        Colour c3 = new Colour(0.9411764706F, 0.9411764706F, 0.9411764706F);
+        assertNotEquals(c2, c3);
+        assertNotEquals(c3, new Object());
+    }
+
 
 }
 
